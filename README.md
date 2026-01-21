@@ -4,6 +4,7 @@ build -p OCConfigSelector/OCConfigSelector.dsc -a X64 -t GCC5 -b RELEASE
 ```
 ### using
 put config-xx.plist in /EFI/OC/
+
 add this in every .plist
 ```
 <key>Tools</key>
