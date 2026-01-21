@@ -1,0 +1,35 @@
+[Defines]
+  INF_VERSION            = 0x0001001A
+  BASE_NAME              = OCConfigSelector
+  FILE_GUID              = a7a54bab-9f5f-4c1d-8412-6b3b74c5b57d
+  MODULE_TYPE            = UEFI_APPLICATION
+  VERSION_STRING         = 5.0
+  ENTRY_POINT            = UefiMain
+
+[Sources]
+  OCConfigSelector.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[Guids]
+  gEfiFileInfoGuid
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiMmAccessProtocolGuid
+
+[LibraryClasses]
+  UefiLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  DevicePathLib
+  BaseLib
+  DebugLib
+
+[BuildOptions]
+  DEBUG_GCC5_X64_CC_FLAGS   =  -fno-stack-protector
+  #RELEASE_GCC5_X64_CC_FLAGS = -fno-stack-protector
